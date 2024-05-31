@@ -1,0 +1,37 @@
+<p>listar works!</p>
+<br><br><br>
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="background-color:bisque ;">
+            <h3 class="text-center">Lista de Computadoras</h3>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Precio</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let j of lista">
+                    <td>{{j.id}}</td>
+                    <td>{{j.marca}}</td>
+                    <td>{{j.modelo}}</td>
+                    <td>{{j.color}}</td>
+                    <td>{{j.precio}}</td>
+                    <td><button type="button" class="btn btn-outline-primary" ><i class="bi bi-arrow-clockwise" (click)="editarC(j)"></i></button></td>
+                    <td><button type="button" class="btn btn-outline-secondary" ><i class="bi bi-trash3-fill" (click)="eliminarC(j)"></i></button></td>
+                </tr>
+            </tbody>
+       </table>
+    </div>
+
+</div>
+
